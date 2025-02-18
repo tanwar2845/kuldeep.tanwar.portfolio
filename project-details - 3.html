@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+
+    <style>
+      /* Fixed navigation styles */
+      .ftco-navbar-light {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+        background: #333 !important; /* Dark background */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      .ftco-navbar-light .navbar-brand,
+      .ftco-navbar-light .nav-link {
+        color: white !important;
+      }
+
+      .ftco-navbar-light .nav-link:hover {
+        color: #ffbd39 !important;
+      }
+
+      /* Adjust container padding to account for fixed navbar */
+      .project-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 100px 20px 40px; /* Increased top padding */
+        background: white;
+      }
+      
+      .project-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .project-title {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .project-image {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .project-content {
+        color: #444;
+        line-height: 1.8;
+      }
+
+      .project-section {
+        margin-bottom: 30px;
+      }
+
+      .project-section h3 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #e5a932;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+      }
+
+      .links {
+        display: inline-block;
+        padding: 10px 20px;
+        color: rgb(233, 225, 225);
+        text-decoration: none;
+        border-radius: 8px;       /* Curved corners */
+        background-color: #1d1c1b; /* Light gray background (adjust as needed) */
+        margin-top: 20px;
+        transition: background-color 0.3s;
+        font-size: 20px;
+        transition: transform 0.3s ease-in-out; /* Smooth transition */
+      }
+
+      .links:hover {
+        transform: scale(1.3); /* Scales the element to 110% of its size */
+        color: rgb(12, 12, 12); /* Ensure text remains black */
+        background-color: #e5a932;
+      }
+
+      .back-button:hover {
+        background-color: #e5a932;
+        color: rgb(10, 10, 10);
+      }
+
+      /* Navbar toggle button color */
+      .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      /* Position the owl-nav container absolutely within the carousel */
+      .project-carousel {
+        position: relative;
+      }
+
+      /* Style and position the navigation container */
+      .project-carousel .owl-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;  /* Allow clicks to pass through gaps, if needed */
+      }
+
+      /* Style the individual navigation buttons */
+      .project-carousel .owl-nav button {
+        pointer-events: auto;  /* Re-enable pointer events on the buttons */
+        background: #ffbd39;  /* Adjust background color as needed */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        color: white;
+        font-size: 16px;
+      }
+
+      /* Optional: Adjust button hover effects */
+      .project-carousel .owl-nav button:hover {
+        background: #e4be4e;
+      }
+      .project-carousel .owl-nav i {
+        font-size: 200px; /* Increase this value as needed */
+      }
+      
+      .project-carousel .owl-nav .arrow {
+        font-size: 40px;  /* Increase the size as needed */
+        line-height: 1;   /* Ensure proper vertical alignment */
+        transform: scale(1); /* Default size */
+        transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+        color: #080808;
+      }
+
+      .project-carousel .owl-nav button:hover .arrow {
+        transform: scale(1.2);  /* Increase size by 20% when hovered */
+      }
+    </style>
+  </head>
+  <body style="background: white;">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Kuldeep Tanwar</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="index.html#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="index.html#project-section" class="nav-link"><span>Projects</span></a></li>
+            <li class="nav-item"><a href="index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="project-container">
+      <div class="project-header">
+        <h1 class="project-title"> 
+          Vrinda Store excel dashboard</h1>
+        <div class="owl-carousel project-carousel">
+          <div class="item">
+            <img src="images/proj_4.png" alt="Project Image 1" class="project-image">
+          </div>
+          <!-- <div class="item">
+            <img src="images/proj_3_1.png" alt="Project Image 2" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_2.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_3.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_4.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_5.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_6.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_7.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_8.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_9.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_10.png" alt="Project Image 3" class="project-image">
+          </div> -->
+          <!-- Add more images as needed -->
+        </div>
+        <!-- <a><a href="https://www.canva.com/design/DAGcd_07KZA/_yn7lnSZ_-yoVPLESvsdjQ/view?utm_content=DAGcd_07KZA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9dd89d33e4" class="links">Excel file</a></a> -->
+        <a><a href="https://github.com/tanwar2845/Vrinda_Store_excel_dashboard.git" class="links">Source Data</a></a>
+        <!-- <a><a href="https://www.linkedin.com/posts/kuldeep-tanwar2845_sql-dataanalytics-resumeproject-activity-7293501144490778624-ZZum?utm_source=share&utm_medium=member_desktop" class="links">Video Presentation</a></a> -->
+      </div>
+
+        
+
+      <div class="project-content">
+        <div class="project-section">
+          <h3>Overview</h3>
+          <p>In this Excel project, I focused on advanced Excel visualizations to analyze sales performance, customer demographics, order status, and sales channels. Gain experience in filtering charts with slicers, enhancing chart formatting through grid lines, outlines, and color schemes, applying relevant color trends for effective visualization, and selecting the right chart types for different data sets.</p>
+        </div>
+
+        <div class="project-section">
+          <h3>Tools Used</h3>
+          <ul>
+            <li>Microsoft Excel</li>
+            <!-- <li>MySQL</li>
+            <li>Excel</li> -->
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Project Objectives</h3>
+          <ul>
+            <li>To analyze the sales performance of Vrinda Store over a period.</li>
+            <li>To understand customer demographics and their purchasing patterns.</li>
+            <li>To evaluate the effectiveness of various sales channels.</li>
+            <li>To identify the top-performing states in terms of sales.</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Key Insights</h3>
+          <ul>
+          <li>
+            <b>Sales Performance:</b> The store showed positive growth in order counts and sales amounts from January to March, followed by a decline in order counts in the subsequent months.<li>
+            <b>Customer Demographics:</b>  Women comprised a significant majority of the customer base, accounting for approximately 69.42% of all orders.</li><li>
+            <b>Order Status:</b> Most orders were successfully delivered, with a delivery rate of around 92.25%. The cancellation rate was relatively low at 2.72%.</li><li>
+            <b>Sales Channels:</b> The majority of orders came from Amazon, making it a major contributor to the order volume.</li><li>
+            <b>Top Performing States:</b> Maharashtra, Karnataka, and Uttar Pradesh were among the top contributors to the store's sales.</li>
+          </li>
+          <ul>
+        </div>
+
+        <!-- <div class="project-section">
+          <h3>Action</h3>
+          <ul>
+            <li>Acknowledged all ad-hoc requests and formulated SQL queries for each.</li><li>
+
+            Extracted the required data by executing optimized SQL queries tailored to each request.</li><li>
+
+            Analyzed trends and patterns using aggregate functions, filtering, and sorting techniques.</li><li>
+
+            Presented key insights with graphs and charts for better understanding and effective data visualization.</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Results</h3>
+          <ul>
+            <li>36.33% increase in product count from 2020 to 2021, indicating strong portfolio expansion.</li><li>
+            Notebook segment had the highest number of unique products (129), suggesting high demand.</li><li>
+            Accessories segment saw the largest growth (+34 unique products), driven by increased demand for peripherals.</li><li>
+            214.28% growth in Desktop products, signaling strategic expansion in this category.</li><li>
+            Q4 of 2020 had the highest sold quantity, likely due to festive season demand.</li><li>
+            Retailer channel contributed the highest revenue in 2021, proving its dominance in distribution.</li><li>
+            Strategic recommendations were made based on insights for better product placement and sales optimization.</li>
+          </ul> -->
+        </div>
+        
+
+        <a href="index.html#project-section" class="back-button">← Back to Portfolio</a>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+      // Add smooth scrolling behavior when returning to main page
+      document.querySelector('.back-button').addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        const targetPage = href.split('#')[0];
+        const targetSection = href.split('#')[1];
+        
+        if(targetPage) {
+          sessionStorage.setItem('scrollTarget', targetSection);
+          window.location.href = href;
+        }
+      });
+    </script>
+    <!-- Include jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Include Owl Carousel JS -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- Include Your Custom JS -->
+    <script src="js/custom-carousel.js"></script>
+
+  </body>
+</html>

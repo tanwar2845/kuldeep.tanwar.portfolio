@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+
+    <style>
+      /* Fixed navigation styles */
+      .ftco-navbar-light {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+        background: #333 !important; /* Dark background */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      .ftco-navbar-light .navbar-brand,
+      .ftco-navbar-light .nav-link {
+        color: white !important;
+      }
+
+      .ftco-navbar-light .nav-link:hover {
+        color: #ffbd39 !important;
+      }
+
+      /* Adjust container padding to account for fixed navbar */
+      .project-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 100px 20px 40px; /* Increased top padding */
+        background: white;
+      }
+      
+      .project-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .project-title {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .project-image {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .project-content {
+        color: #444;
+        line-height: 1.8;
+      }
+
+      .project-section {
+        margin-bottom: 30px;
+      }
+
+      .project-section h3 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #e5a932;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+      }
+
+      .links {
+        display: inline-block;
+        padding: 10px 20px;
+        color: rgb(233, 225, 225);
+        text-decoration: none;
+        border-radius: 8px;       /* Curved corners */
+        background-color: #1d1c1b; /* Light gray background (adjust as needed) */
+        margin-top: 20px;
+        transition: background-color 0.3s;
+        font-size: 20px;
+        transition: transform 0.3s ease-in-out; /* Smooth transition */
+      }
+
+      .links:hover {
+        transform: scale(1.3); /* Scales the element to 110% of its size */
+        color: rgb(12, 12, 12); /* Ensure text remains black */
+        background-color: #e5a932;
+      }
+
+      .back-button:hover {
+        background-color: #e5a932;
+        color: rgb(10, 10, 10);
+      }
+
+      /* Navbar toggle button color */
+      .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      /* Position the owl-nav container absolutely within the carousel */
+      .project-carousel {
+        position: relative;
+      }
+
+      /* Style and position the navigation container */
+      .project-carousel .owl-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;  /* Allow clicks to pass through gaps, if needed */
+      }
+
+      /* Style the individual navigation buttons */
+      .project-carousel .owl-nav button {
+        pointer-events: auto;  /* Re-enable pointer events on the buttons */
+        background: #ffbd39;  /* Adjust background color as needed */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        color: white;
+        font-size: 16px;
+      }
+
+      /* Optional: Adjust button hover effects */
+      .project-carousel .owl-nav button:hover {
+        background: #e4be4e;
+      }
+      .project-carousel .owl-nav i {
+        font-size: 200px; /* Increase this value as needed */
+      }
+      
+      .project-carousel .owl-nav .arrow {
+        font-size: 40px;  /* Increase the size as needed */
+        line-height: 1;   /* Ensure proper vertical alignment */
+        transform: scale(1); /* Default size */
+        transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+        color: #080808;
+      }
+
+      .project-carousel .owl-nav button:hover .arrow {
+        transform: scale(1.2);  /* Increase size by 20% when hovered */
+      }
+    </style>
+  </head>
+  <body style="background: white;">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Kuldeep Tanwar</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="index.html#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="index.html#project-section" class="nav-link"><span>Projects</span></a></li>
+            <li class="nav-item"><a href="index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="project-container">
+      <div class="project-header">
+        <h1 class="project-title"> 
+          The Ad Hoc Request</h1>
+        <div class="owl-carousel project-carousel">
+          <div class="item">
+            <img src="images/proj_3.jpg" alt="Project Image 1" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_1.png" alt="Project Image 2" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_2.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_3.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_4.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_5.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_6.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_7.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_8.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_9.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_10.png" alt="Project Image 3" class="project-image">
+          </div>
+          <!-- Add more images as needed -->
+        </div>
+        <a><a href="https://www.canva.com/design/DAGcd_07KZA/_yn7lnSZ_-yoVPLESvsdjQ/view?utm_content=DAGcd_07KZA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9dd89d33e4" class="links">Presentation</a></a>
+        <a><a href="https://www.linkedin.com/posts/kuldeep-tanwar2845_sql-dataanalytics-resumeproject-activity-7293501144490778624-ZZum?utm_source=share&utm_medium=member_desktop" class="links">Video Presentation</a></a>
+        <a><a href="https://github.com/tanwar2845/The_Ad_Hoc_Request.git" class="links">Source Data</a></a>
+      </div>
+
+        
+
+      <div class="project-content">
+        <div class="project-section">
+          <h3>Overview</h3>
+          <p>This project leveraged MySQL to analyze ten ad-hoc requests for Atliq Hardwares, focusing on product growth, customer insights, and sales performance. Optimized SQL queries were crafted and executed to extract and analyze data, revealing key trends like a 36.33% product growth from 2020 to 2021 and the retailer channel's dominance in 2021 revenue. The insights gained from this SQL driven analysis enabled strategic recommendations for product placement and sales optimization.</p>
+        </div>
+
+        <div class="project-section">
+          <h3>Tools Used</h3>
+          <ul>
+            <li>MySQL</li>
+            <!-- <li>MySQL</li>
+            <li>Excel</li> -->
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Problem statement</h3>
+          <ul>
+            Atliq Hardwares, operating across multiple regions, required in-depth insights into its product expansion, customer behavior, and sales trends. The company is struggling to gain sufficient insights to make data-oriented decisions. They’ve decided to issue a series of ad-hoc requests to a data analyst. These requests are aimed at evaluating not only the analyst’s technical abilities but also their soft skills, such as problem-solving and communication.
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Task</h3>
+          <ul><b>Isshued 10 Request:</b>
+          <li>
+
+            <b>1.</b> Market Presence: Identifying the markets where "Atliq Exclusive" operates in the APAC region.<li>
+            <b>2.</b> Product Growth: Evaluating the increase in unique products from 2020 to 2021.</li><li>
+            <b>3.</b> Product Segments: Reporting unique product counts for each segment and sorting them in descending order.</li><li>
+            <b>4.</b> Segment Growth: Determining the segment with the highest increase in unique products.</li><li>
+            <b>5.</b> Manufacturing Costs: Identifying the highest and lowest manufacturing cost products.</li><li>
+            <b>6.</b> Customer Discounts: Finding the top 5 customers with the highest pre-invoice discounts in 2021.</li><li>
+            <b>7.</b> Sales Performance: Analyzing monthly gross sales for "Atliq Exclusive."</li><li>
+            <b>8.</b> Quarterly Performance: Identifying the best-performing quarter in 2020 based on sold quantity.</li><li>
+            <b>9.</b> Sales Channel Contribution: Determining which sales channel contributed the most revenue in 2021.</li><li>
+            <b>10.</b> Top-Selling Products: Listing the top 3 products in each division based on total sold quantity in 2021.</li>
+          </li>
+          <ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Action</h3>
+          <ul>
+            <li>Acknowledged all ad-hoc requests and formulated SQL queries for each.</li><li>
+
+            Extracted the required data by executing optimized SQL queries tailored to each request.</li><li>
+
+            Analyzed trends and patterns using aggregate functions, filtering, and sorting techniques.</li><li>
+
+            Presented key insights with graphs and charts for better understanding and effective data visualization.</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Results</h3>
+          <ul>
+            <li>36.33% increase in product count from 2020 to 2021, indicating strong portfolio expansion.</li><li>
+            Notebook segment had the highest number of unique products (129), suggesting high demand.</li><li>
+            Accessories segment saw the largest growth (+34 unique products), driven by increased demand for peripherals.</li><li>
+            214.28% growth in Desktop products, signaling strategic expansion in this category.</li><li>
+            Q4 of 2020 had the highest sold quantity, likely due to festive season demand.</li><li>
+            Retailer channel contributed the highest revenue in 2021, proving its dominance in distribution.</li><li>
+            Strategic recommendations were made based on insights for better product placement and sales optimization.</li>
+          </ul>
+        </div>
+        
+
+        <a href="index.html#project-section" class="back-button">← Back to Portfolio</a>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+      // Add smooth scrolling behavior when returning to main page
+      document.querySelector('.back-button').addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        const targetPage = href.split('#')[0];
+        const targetSection = href.split('#')[1];
+        
+        if(targetPage) {
+          sessionStorage.setItem('scrollTarget', targetSection);
+          window.location.href = href;
+        }
+      });
+    </script>
+    <!-- Include jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Include Owl Carousel JS -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- Include Your Custom JS -->
+    <script src="js/custom-carousel.js"></script>
+
+  </body>
+</html>

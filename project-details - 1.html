@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+
+    <style>
+      /* Fixed navigation styles */
+      .ftco-navbar-light {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+        background: #333 !important; /* Dark background */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      .ftco-navbar-light .navbar-brand,
+      .ftco-navbar-light .nav-link {
+        color: white !important;
+      }
+
+      .ftco-navbar-light .nav-link:hover {
+        color: #ffbd39 !important;
+      }
+
+      /* Adjust container padding to account for fixed navbar */
+      .project-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 100px 20px 40px; /* Increased top padding */
+        background: white;
+      }
+      
+      .project-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .project-title {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .project-image {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .project-content {
+        color: #444;
+        line-height: 1.8;
+      }
+
+      .project-section {
+        margin-bottom: 30px;
+      }
+
+      .project-section h3 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #e5a932;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+      }
+
+      .links {
+        display: inline-block;
+        padding: 10px 20px;
+        color: rgb(233, 225, 225);
+        text-decoration: none;
+        border-radius: 8px;       /* Curved corners */
+        background-color: #1d1c1b; /* Light gray background (adjust as needed) */
+        margin-top: 20px;
+        transition: background-color 0.3s;
+        font-size: 20px;
+        transition: transform 0.3s ease-in-out; /* Smooth transition */
+      }
+
+      .links:hover {
+        transform: scale(1.3); /* Scales the element to 110% of its size */
+        color: rgb(12, 12, 12); /* Ensure text remains black */
+        background-color: #e5a932;
+      }
+
+      .back-button:hover {
+        background-color: #e5a932;
+        color: rgb(10, 10, 10);
+      }
+
+      /* Navbar toggle button color */
+      .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      /* Position the owl-nav container absolutely within the carousel */
+      .project-carousel {
+        position: relative;
+      }
+
+      /* Style and position the navigation container */
+      .project-carousel .owl-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;  /* Allow clicks to pass through gaps, if needed */
+      }
+
+      /* Style the individual navigation buttons */
+      .project-carousel .owl-nav button {
+        pointer-events: auto;  /* Re-enable pointer events on the buttons */
+        background: #ffbd39;  /* Adjust background color as needed */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        color: white;
+        font-size: 16px;
+      }
+
+      /* Optional: Adjust button hover effects */
+      .project-carousel .owl-nav button:hover {
+        background: #e4be4e;
+      }
+      .project-carousel .owl-nav i {
+        font-size: 200px; /* Increase this value as needed */
+      }
+      
+      .project-carousel .owl-nav .arrow {
+        font-size: 40px;  /* Increase the size as needed */
+        line-height: 1;   /* Ensure proper vertical alignment */
+        transform: scale(1); /* Default size */
+        transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+        color: #080808;
+      }
+
+      .project-carousel .owl-nav button:hover .arrow {
+        transform: scale(1.2);  /* Increase size by 20% when hovered */
+      }
+    </style>
+  </head>
+  <body style="background: white;">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Kuldeep Tanwar</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="index.html#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="index.html#project-section" class="nav-link"><span>Projects</span></a></li>
+            <li class="nav-item"><a href="index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="project-container">
+      <div class="project-header">
+        <h1 class="project-title"> 
+          Hospitality Analysis</h1>
+        <div class="owl-carousel project-carousel">
+          <div class="item">
+            <img src="images/proj_2.png" alt="Project Image 1" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_2_1.png" alt="Project Image 2" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_2_2.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_2_3.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_2_4.png" alt="Project Image 3" class="project-image">
+          </div>
+          <!-- Add more images as needed -->
+        </div>
+        <a><a href="https://app.powerbi.com/view?r=eyJrIjoiOTMxYmQwZWMtZGM3MC00NTQ3LTg4YTItMDg0OGFhNjc1NWE0IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9" class="links">Dashboard</a></a>
+        <a><a href="https://www.linkedin.com/posts/kuldeep-tanwar2845_%F0%9D%97%A5%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%82%F0%9D%97%BA%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B4-%F0%9D%97%A0%F0%9D%98%86-%F0%9D%97%97%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%AE-%F0%9D%97%94%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%B9%F0%9D%98%86-activity-7281245614414217216-y29k?utm_source=share&utm_medium=member_desktop" class="links">Video Presentation</a></a>
+        <a><a href="https://github.com/tanwar2845/Hospitality_Analysis.git" class="links">Source Data</a></a>
+      </div>
+
+        
+
+      <div class="project-content">
+        <div class="project-section">
+          <h3>Overview</h3>
+          <p>Facing declining market share, Atliq Grand Hotel needed data-driven insights. I analyzed financial performance, occupancy, and customer behavior by combining datasets and building a dynamic dashboard. This revealed city-specific performance trends, customer satisfaction challenges, and platform effectiveness, enabling targeted strategies for recovery.</p>
+        </div>
+
+        <div class="project-section">
+          <h3>Tools Used</h3>
+          <ul>
+            <li>Power BI</li>
+            <!-- <li>MySQL</li>
+            <li>Excel</li> -->
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Problem statement</h3>
+          <ul>
+            Atliq Grand Hotel, a prominent player in the hospitality industry for over 20 years, has recently faced a decline in market share. This downturn is attributed to strategic moves by competitors that disrupted Atliq Grand's stronghold. As a result, the hotel's revenue has significantly decreased, necessitating a comprehensive data-driven strategy to regain its competitive edge.
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Task</h3>
+          <ul>Evaluating financial performance metrics like revenue, RevPAR (Revenue Per Available Room), and ADR (Average Daily Rate). Assessing occupancy trends and customer behavior to identify operational inefficiencies. Enhancing insights into customer satisfaction and booking patterns to improve service offerings. Comparing Week-over-Week (WoW) performance metrics to identify trends and anomalies.<ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Action</h3>
+          <ul>
+            <b>Combined multiple datasets:</b>
+            <ul>
+                <li>Revenue data - fact_aggregated_bookings, fact_bookings for booking</li>
+                <li>Dimension tables - dim_date, dim_rooms, dim_hotels for contextual information. 
+                    Established a star schema to optimize data relationships and enable advanced analytics.</li>
+            </ul>
+
+            <b>Measure Development:</b>
+            <ul>
+                <li>Created key performance measures, including: Revenue, RevPAR, and ADR to monitor financial health. 
+                    Occupancy %, Realization %, and WoW metrics to track operational efficiency. Ratings and Feedback Analysis 
+                    to understand customer satisfaction.</li>
+            </ul>
+
+            <b>Dashboard Design:</b>
+            <ul>
+              <p><li>Built a multi-page dashboard to address specific focus areas:</li></p>
+              <ul>
+                  <li><strong>Revenue & Occupancy View:</strong><br>
+                    Highlighted financial metrics and occupancy rates.</li>
+                  <li><strong>Booking Performance View:</strong><br>
+                    Focused on trends in bookings, cancellations, and platform distribution.</li>
+                  <li><strong>Customer Experience View:</strong><br>
+                    Provided insights into ratings, preferences, and customer feedback.</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Results</h3>
+          <ul>
+            <p>
+              <b>City-Specific Insights:</b>
+            </p>
+            
+            <ul>
+              <li><strong>Hyderabad:</strong><br>
+                Provides the second-highest number of bookings but has the lowest ADR.</li>
+              <li><strong>Mumbai:</strong><br>
+                Generates the highest ADR and contributes the most revenue.</li>
+            </ul>
+
+            <p>
+              <b>Customer Satisfaction:</b>
+            </p>
+            
+            <ul>
+              <li><strong>Atliq Seasons:</strong><br>
+                Receives a poor average rating of 2.4, requiring immediate attention.</li>
+              <li><strong>Bangalore:</strong><br>
+                Despite having the highest average rating for Atliq Grand, the city's overall average rating is not very good.</li>
+              <li><strong>Room Classes:</strong><br>
+                Presidential rooms receive the highest overall average rating among all room classes.</li>
+            </ul>
+
+            <p>
+              <b>Platform Performance:</b>
+            </p>
+            
+            <ul>
+              <li><strong>MakeYourTrip:</strong><br>
+                Emerges as the top platform, contributing the highest number of bookings.</li>
+            </ul>
+          </ul>
+        </div>
+        
+
+        <a href="index.html#project-section" class="back-button">← Back to Portfolio</a>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+      // Add smooth scrolling behavior when returning to main page
+      document.querySelector('.back-button').addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        const targetPage = href.split('#')[0];
+        const targetSection = href.split('#')[1];
+        
+        if(targetPage) {
+          sessionStorage.setItem('scrollTarget', targetSection);
+          window.location.href = href;
+        }
+      });
+    </script>
+    <!-- Include jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Include Owl Carousel JS -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- Include Your Custom JS -->
+    <script src="js/custom-carousel.js"></script>
+
+  </body>
+</html>
