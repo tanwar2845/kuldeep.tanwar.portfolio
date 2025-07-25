@@ -114,102 +114,252 @@
   transform: scale(1.1);
 }
 
-
+.sidebar-nav-link {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.sidebar-nav-link.active,
+li.sidebar-active .sidebar-nav-link {
+  color: #ffbd39 !important;
+  font-weight: bold;
+}
+.sidebar-nav-link:hover {
+  color: #ffbd39 !important;
+}
+.sidebar-nav-item.sidebar-active,
+.sidebar-nav-item:hover {
+  background: rgba(255,189,57,0.12);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255,189,57,0.08);
+}
+.sidebar-nav-item {
+  margin: 12px 0;
+  transition: background 0.2s;
+}
+.sidebar-nav-item.sidebar-active {
+  background: #ffbd39;
+  border-radius: 24px;
+  transition: background 0.2s;
+}
+.sidebar-nav-item.sidebar-active .sidebar-nav-link {
+  color: #191919 !important;
+  font-weight: bold;
+}
 </style>
 
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+<!-- Sidebar Start -->
+<div id="sidebar" style="position:fixed; top:0; left:0; width:140px; height:100vh; background:#191919; box-shadow:2px 0 8px rgba(0,0,0,0.05); z-index:1000; display:flex; flex-direction:column; align-items:center; padding-top:40px;">
+  <img src="images/about.png" alt="Profile" style="width:110px; height:110px; border-radius:50%; object-fit:cover; margin-bottom:52px; border:4px solid #ffbd39; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+  <nav style="width:100%;">
+    <ul style="list-style:none; padding:0; margin:0;width:100%; text-align:center;">
+      <li class="sidebar-nav-item" style="margin:12px 0;"><a href="#home-section" class="sidebar-nav-link" style="color:#fff; text-decoration:none; font-weight:500;">Home</a></li>
+      <li class="sidebar-nav-item" style="margin:12px 0;"><a href="#about-section" class="sidebar-nav-link" style="color:#fff; text-decoration:none; font-weight:500;">About</a></li>
+      <li class="sidebar-nav-item" style="margin:12px 0;"><a href="#project-section" class="sidebar-nav-link" style="color:#fff; text-decoration:none; font-weight:500;">Projects</a></li>
+      <li class="sidebar-nav-item" style="margin:12px 0;"><a href="#contact-section" class="sidebar-nav-link" style="color:#fff; text-decoration:none; font-weight:500;">Contact</a></li>
+    </ul>
+  </nav>
+  <div style="margin-top:auto; margin-bottom:20px; font-size:12px; color:#aaa; text-align:center;">
+    <br>
+  </div>
+</div>
+<!-- Sidebar End -->
+
+<style>
+@media (max-width: 900px) {
+  #sidebar { display: none !important; }
+  #main-content { margin-left: 0 !important; }
+}
+</style>
+
+<div id="main-content" style="margin-left:140px;">
 	  
 	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Kuldeep Tanwar</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+    <section id="home-section" class="hero ftco-no-pb" style="display:flex; flex-direction:column; align-items:center; min-height:100vh; background:none;">
+  <div style="width:100%; display:flex; justify-content:center; align-items:center; background:#111; border-radius:16px; min-width:420px; max-width:520px; margin-top:60px; margin-bottom:8px;">
+    <div class="coverflow-slider">
+      <div class="coverflow-slide">
+        <img src="images/proj_1.png" alt="Project 1">
+        <div class="coverflow-caption">Business Insights 360</div>
+      </div>
+      <div class="coverflow-slide">
+        <img src="images/proj_2.png" alt="Project 2">
+        <div class="coverflow-caption">Hospitality Analysis</div>
+      </div>
+      <div class="coverflow-slide">
+        <img src="images/proj_3.jpg" alt="Project 3">
+        <div class="coverflow-caption">The Ad-Hoc Request</div>
+      </div>
+      <div class="coverflow-slide">
+        <img src="images/proj_4.png" alt="Project 4">
+        <div class="coverflow-caption">Vrinda Store Excel Dashboard</div>
+      </div>
+      <div class="coverflow-slide">
+        <img src="images/proj_5.png" alt="Project 5">
+        <div class="coverflow-caption">Mitron Bank</div>
+      </div>
+      <div class="coverflow-slide">
+        <img src="images/proj_6.jpg" alt="Project 6">
+        <div class="coverflow-caption">Shield Insurance</div>
+      </div>
+    </div>
+  </div>
+  <div style="background:transparent; padding:40px 32px; border-radius:16px; min-width:340px; max-width:1000px; align-self:flex-start; display:flex; flex-direction:row; align-items:center; gap:32px; justify-content:space-between; flex-wrap:nowrap; margin-top:48px;">
+    <div style="flex:1; min-width:200px;">
+      <span style="color:#ffbd39; font-size:16px; font-weight:600; letter-spacing:2px;">HELLO!</span>
+      <h1 style="color:#fff; font-size:1.7rem; font-weight:700; margin:16px 0 0 0;">I'm <span style="color:#ffbd39;">Kuldeep Tanwar</span></h1>
+      <span id="typing-animation"></span>
+      <script>
+      // Initialize the typing animation
+      const typingAnimationElement = document.getElementById('typing-animation');
+      const typingTexts = [
+        'Excel  ',
+        'Power BI  ',
+        'MySQL  ',
+        'Python  ',
+      ];
+      function playTypingAnimation(text) {
+        for (let i = 0; i < text.length; i++) {
+          setTimeout(() => {
+            typingAnimationElement.textContent += text[i];
+          }, i * 200);
+        }
+        setTimeout(() => {
+          typingAnimationElement.textContent = '';
+          playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+        }, text.length * 200);
+      }
+      playTypingAnimation(typingTexts[0]);
+      </script>
+    </div>
+    <div style="flex-shrink:0; min-width:180px; text-align:center; margin-top:45px;margin-left:380px;">
+      <h2 style="color:#fff; font-size:1.1rem;">A Data Analyst</h2>
+      <p><a href="https://www.linkedin.com/in/kuldeep-tanwar2845/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+        <a href="https://github.com/tanwar2845?tab=repositories" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
+    </div>
+  </div>
+</section>
+<style>
+.coverflow-slider {
+  position: relative;
+  width: 700px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  background: transparent;
+  border-radius: 16px;
+  overflow: visible;
+}
+.coverflow-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 440px;
+  height: 250px;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(.4,2,.6,1);
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.coverflow-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+.coverflow-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 0;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 0 0 16px 16px;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  z-index: 2;
+}
+.coverflow-slide.active {
+  opacity: 1;
+  transform: translateX(0) scale(1.1) rotateY(0deg);
+  z-index: 3;
+  pointer-events: auto;
+}
+.coverflow-slide.left {
+  opacity: 1;
+  transform: translateX(-140px) scale(0.9) rotateY(30deg);
+  z-index: 2;
+}
+.coverflow-slide.right {
+  opacity: 1;
+  transform: translateX(140px) scale(0.9) rotateY(-30deg);
+  z-index: 2;
+}
+.coverflow-slide.left2 {
+  opacity: 0.7;
+  transform: translateX(-260px) scale(0.8) rotateY(40deg);
+  z-index: 1;
+}
+.coverflow-slide.right2 {
+  opacity: 0.7;
+  transform: translateX(260px) scale(0.8) rotateY(-40deg);
+  z-index: 1;
+}
+</style>
+<script>
+(function() {
+  const slides = document.querySelectorAll('.coverflow-slide');
+  let current = 0;
+  function updateCoverflow() {
+    slides.forEach((slide, i) => {
+      slide.className = 'coverflow-slide';
+      if (i === current) slide.classList.add('active');
+      else if (i === (current - 1 + slides.length) % slides.length) slide.classList.add('left');
+      else if (i === (current + 1) % slides.length) slide.classList.add('right');
+      else if (i === (current - 2 + slides.length) % slides.length) slide.classList.add('left2');
+      else if (i === (current + 2) % slides.length) slide.classList.add('right2');
+    });
+  }
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    updateCoverflow();
+  }
+  updateCoverflow();
+  setInterval(nextSlide, 2200);
+})();
+</script>
+<script>
+$(document).ready(function(){
+  $(".project-carousel").owlCarousel({
+    items:1,
+    margin:20,
+    loop:true,
+    autoplay:true,
+    autoplayTimeout:2500,
+    smartSpeed:700,
+    responsive:{
+      600:{items:2},
+      900:{items:2},
+      1200:{items:2}
+    }
+  });
+});
+</script>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <!-- <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li> -->
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_2.gif);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Kuldeep Tanwar</span></h1>
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Excel  ',
-						'Power BI  ',
-						'MySQL  ',
-						'Python  ',
-						// 'Teacher   ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>A Data Analyst</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/kuldeep-tanwar2845/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
-							<a href="https://github.com/tanwar2845?tab=repositories" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section" style="margin-bottom:0; padding-bottom:0;">
     	<div class="container">
 			<div class="row">
 				<div class="row d-flex align-items-stretch">
@@ -401,16 +551,29 @@
 
    
 
-    <section class="ftco-section" id="project-section">
+    <section class="ftco-section ftco-no-pb" id="project-section" style="margin-top:0; padding-top:0;">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+            <p>Below are the sample Data Analytics projects on SQL, Python & Power BI</p>
           </div>
         </div>
         <div class="row d-flex">
+
+			<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+			<a href="project-details - 5.html" class="block-20 zoom-effect" style="background-image: url('images/proj_6.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="project-details - 5.html">
+				Shield Insurance</a></h3>
+			  <p>A Power BI project focused on customer and revenue trends in the insurance domain.</p>
+			</div>
+		  </div>
+		</div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
               <a href="project-details.html" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');">
@@ -557,7 +720,7 @@
 
 
 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <section class="ftco-section contact-section ftco-no-pt ftco-no-pb" id="contact-section">
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -662,6 +825,73 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+
+<script>
+// Sidebar scrollspy functionality
+const sections = [
+  {id: 'home-section'},
+  {id: 'about-section'},
+  {id: 'project-section'},
+  {id: 'contact-section'}
+];
+const navLinks = document.querySelectorAll('.sidebar-nav-link');
+
+// Smooth scroll on sidebar nav click
+let scrollSpyEnabled = true;
+navLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      // Immediately set active state
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if(link.parentElement) link.parentElement.classList.remove('sidebar-active');
+      });
+      this.classList.add('active');
+      if(this.parentElement) this.parentElement.classList.add('sidebar-active');
+      // Disable scrollspy during smooth scroll
+      scrollSpyEnabled = false;
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+        // Re-enable scrollspy after scroll ends (timeout based on distance)
+        setTimeout(() => { scrollSpyEnabled = true; }, 700);
+      } else {
+        scrollSpyEnabled = true;
+      }
+    }
+  });
+});
+
+function onScroll() {
+  if (!scrollSpyEnabled) return;
+  let scrollPos = window.scrollY || document.documentElement.scrollTop;
+  let offset = 120; // adjust if needed for header height
+  let found = false;
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const section = document.getElementById(sections[i].id);
+    if (section && scrollPos + offset >= section.offsetTop) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if(link.parentElement) link.parentElement.classList.remove('sidebar-active');
+      });
+      if (navLinks[i]) {
+        navLinks[i].classList.add('active');
+        if(navLinks[i].parentElement) navLinks[i].parentElement.classList.add('sidebar-active');
+      }
+      found = true;
+      break;
+    }
+  }
+  if (!found) navLinks.forEach(link => {
+    link.classList.remove('active');
+    if(link.parentElement) link.parentElement.classList.remove('sidebar-active');
+  });
+}
+window.addEventListener('scroll', onScroll);
+document.addEventListener('DOMContentLoaded', onScroll);
+</script>
     
   </body>
 </html>

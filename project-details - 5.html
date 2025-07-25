@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+
+    <style>
+      /* Fixed navigation styles */
+      .ftco-navbar-light {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+        background: #333 !important; /* Dark background */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      .ftco-navbar-light .navbar-brand,
+      .ftco-navbar-light .nav-link {
+        color: white !important;
+      }
+
+      .ftco-navbar-light .nav-link:hover {
+        color: #ffbd39 !important;
+      }
+
+      /* Adjust container padding to account for fixed navbar */
+      .project-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 100px 20px 40px; /* Increased top padding */
+        background: white;
+      }
+      
+      .project-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .project-title {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .project-image {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .project-content {
+        color: #444;
+        line-height: 1.8;
+      }
+
+      .project-section {
+        margin-bottom: 30px;
+      }
+
+      .project-section h3 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #e5a932;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+      }
+
+      .links {
+        display: inline-block;
+        padding: 10px 20px;
+        color: rgb(233, 225, 225);
+        text-decoration: none;
+        border-radius: 8px;       /* Curved corners */
+        background-color: #1d1c1b; /* Light gray background (adjust as needed) */
+        margin-top: 20px;
+        transition: background-color 0.3s;
+        font-size: 20px;
+        transition: transform 0.3s ease-in-out; /* Smooth transition */
+      }
+
+      .links:hover {
+        transform: scale(1.3); /* Scales the element to 110% of its size */
+        color: rgb(12, 12, 12); /* Ensure text remains black */
+        background-color: #e5a932;
+      }
+
+      .back-button:hover {
+        background-color: #e5a932;
+        color: rgb(10, 10, 10);
+      }
+
+      /* Navbar toggle button color */
+      .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      /* Position the owl-nav container absolutely within the carousel */
+      .project-carousel {
+        position: relative;
+      }
+
+      /* Style and position the navigation container */
+      .project-carousel .owl-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;  /* Allow clicks to pass through gaps, if needed */
+      }
+
+      /* Style the individual navigation buttons */
+      .project-carousel .owl-nav button {
+        pointer-events: auto;  /* Re-enable pointer events on the buttons */
+        background: #ffbd39;  /* Adjust background color as needed */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        color: white;
+        font-size: 16px;
+      }
+
+      /* Optional: Adjust button hover effects */
+      .project-carousel .owl-nav button:hover {
+        background: #e4be4e;
+      }
+      .project-carousel .owl-nav i {
+        font-size: 200px; /* Increase this value as needed */
+      }
+      
+      .project-carousel .owl-nav .arrow {
+        font-size: 40px;  /* Increase the size as needed */
+        line-height: 1;   /* Ensure proper vertical alignment */
+        transform: scale(1); /* Default size */
+        transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+        color: #080808;
+      }
+
+      .project-carousel .owl-nav button:hover .arrow {
+        transform: scale(1.2);  /* Increase size by 20% when hovered */
+      }
+    </style>
+  </head>
+  <body style="background: white;">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Kuldeep Tanwar</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="index.html#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="index.html#project-section" class="nav-link"><span>Projects</span></a></li>
+            <li class="nav-item"><a href="index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="project-container">
+      <div class="project-header">
+        <h1 class="project-title"> 
+          Shield Insurance</h1>
+        <div class="owl-carousel project-carousel">
+          <div class="item">
+            <img src="images/proj_6.jpg" alt="Project Image 1" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_6_1.jpg" alt="Project Image 2" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_6_2.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_6_3.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_6_4.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_6_5.jpg" alt="Project Image 3" class="project-image">
+          </div>
+          <!-- <div class="item">
+            <img src="images/proj_3_6.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_7.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_8.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_9.png" alt="Project Image 3" class="project-image">
+          </div>
+          <div class="item">
+            <img src="images/proj_3_10.png" alt="Project Image 3" class="project-image">
+          </div> -->
+          <!-- Add more images as needed -->
+        </div>
+        <a><a href="https://app.powerbi.com/view?r=eyJrIjoiMGFlMGYyNDItMTE5NC00OTZmLWJmMjUtZGY2ZjU2ZjIxZWQ0IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9" class="links">Dashboard</a></a>
+        <a><a href="video-3.html" class="links">Video Presentation</a></a>
+        <!-- <a><a href="https://github.com/tanwar2845/The_Ad_Hoc_Request.git" class="links">Source Data</a></a> -->
+      </div>
+
+        
+
+      <div class="project-content">
+        <div class="project-section">
+          <h3>Overview</h3>
+          <p>Shield Insurance Project --
+Built an interactive Power BI dashboard to explore customer behavior and revenue patterns.
+Analyzed trends across age groups, time periods, and sales channels.
+Delivered insights to support data-driven decision-making in the insurance domain.</p>
+        </div>
+
+        <div class="project-section">
+          <h3>Tools Used</h3>
+          <ul>
+            <li>Power BI</li>
+            <!-- <li>MySQL</li>
+            <li>Excel</li> -->
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Problem statement</h3>
+          <ul>
+            Shield Insurance aims to uncover actionable insights from customer and sales data to guide policy improvements and strategic decisions. By analyzing trends across age groups, sales channels, and time periods, the company seeks to upgrade its offerings and align them with customer behavior — ultimately driving higher revenue and better market positioning.
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Task</h3>
+          <ul>
+            To design an interactive Power BI dashboard for Shield Insurance that analyzes customer distribution, revenue patterns, and sales mode performance across different time periods. The goal was to extract meaningful insights that could help improve business decisions and policy offerings.
+          <ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Action</h3>
+          <ul>
+            <li>Collected and explored customer and revenue data.</li><li>
+
+             Built interactive dashboards with KPIs, charts, and slicers.</li><li>
+
+            Analyzed the trend of customer and revenue by age group, month, and sales mode.</li><li>
+
+            Derived actionable insights to support policy upgrades and revenue growth.
+
+</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h3>Results</h3>
+          <ul>
+            <li>Identified a significant surge in customer acquisition during March, linked to end-of-year tax-saving behavior.</li><li>
+            Discovered a moderate rise in customer count in December due to early tax planning and bonuses.</li><li>
+            Found that the 65+ age group, while only 8% of customers, contributed 20% of total revenue — highlighting a high-value segment.</li><li>
+            Observed a shift from offline to online sales channels, indicating changing customer preferences.</li><li>
+            Detected balanced performance in some sales modes, contributing equally to revenue and customer count.</li><li>
+            Gained insights to help optimize sales strategy and support data-driven policy improvements.</li>
+          </ul>
+        </div>
+        
+
+        <a href="index.html#project-section" class="back-button">← Back to Portfolio</a>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+      // Add smooth scrolling behavior when returning to main page
+      document.querySelector('.back-button').addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        const targetPage = href.split('#')[0];
+        const targetSection = href.split('#')[1];
+        
+        if(targetPage) {
+          sessionStorage.setItem('scrollTarget', targetSection);
+          window.location.href = href;
+        }
+      });
+    </script>
+    <!-- Include jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Include Owl Carousel JS -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- Include Your Custom JS -->
+    <script src="js/custom-carousel.js"></script>
+
+  </body>
+</html>
